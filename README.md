@@ -1,4 +1,4 @@
 # WEB-DESIGN
 
-a easy JavaScript project which implement a To-do-list
+a To-do-list by javaScript 
 
