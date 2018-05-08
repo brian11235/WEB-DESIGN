@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>checkbox_JS test</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#checkAll").change(function() {
+                if($(this).prop('checked')==true){
+                     $("input").prop('checked',true);
+                }else{
+                     $("input").prop('checked',false);
+                }
+        });
+        $("input").change(function(){
+              if($("input").index(this)==1){
+                    if($(this).prop('checked')==true){
+                          $("input:eq(2)").prop('checked',true);
+                          $("input:eq(3)").prop('checked',true);
+                          $("input:eq(4)").prop('checked',true);
+                          $("input:eq(5)").prop('checked',true);
+                    }else{
+                          $("input:eq(2)").prop('checked',false);
+                          $("input:eq(3)").prop('checked',false);
+                          $("input:eq(4)").prop('checked',false);
+                          $("input:eq(5)").prop('checked',false);
+                    }
+              }else if($("input").index(this)==6){
+                    if($(this).prop('checked')==true){
+                          $("input:eq(7)").prop('checked',true);
+                          $("input:eq(8)").prop('checked',true);
+                          $("input:eq(9)").prop('checked',true);
+                          $("input:eq(10)").prop('checked',true);
+                    }else{
+                          $("input:eq(7)").prop('checked',false);
+                          $("input:eq(8)").prop('checked',false);
+                          $("input:eq(9)").prop('checked',false);
+                          $("input:eq(10)").prop('checked',false);
+                    }
+              }else if($("input").index(this)==11){
+                    if($(this).prop('checked')==true){
+                          $("input:eq(12)").prop('checked',true);
+                          $("input:eq(13)").prop('checked',true);
+                          $("input:eq(14)").prop('checked',true);
+                          $("input:eq(15)").prop('checked',true);
+                    }else{
+                          $("input:eq(12)").prop('checked',false);
+                          $("input:eq(13)").prop('checked',false);
+                          $("input:eq(14)").prop('checked',false);
+                          $("input:eq(15)").prop('checked',false);
+                    }
+                }
+        })
+    });
+</script>
+</head>
+<body>
+
+    JS請寫在頁面底下，Jquery方式寫底下功能
+    <ul>
+        <li>請引入 Jquery library，並用Jqery方式撰寫，寫在html頁面上即可</li>
+        <li>需要有 全選/清除 checkbox 功能</li>
+        <li>點選 level 1 checkbox ，該項目底下也一併 全選/清除(不影響其他checkbox)</li>
+    </ul>
+
+
+
+        <fieldset>
+            <label><input type="checkbox" id="checkAll"/> Check all</label>
+            <ol>
+                <li>
+                    <label><input type="checkbox"/> level 1</label>
+                    <ul>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox"/> level 1</label>
+                    <ul>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox"/> level 1</label>
+                    <ul>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                        <li><label><input type="checkbox"/> level 2 - Option 1</label></li>
+                    </ul>
+                </li>
+            </ol>
+
+        </fieldset>
+
+</body>
+</html>
+
